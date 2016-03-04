@@ -1,0 +1,35 @@
+{
+  "name": "The Bookmark Project a.k.a. tbmp",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "A minimalist and dead simple cloud bookmark app.",
+  "homepage_url": "http://arrc.in/labs/tbmp-chrome",
+  "icons": {
+    "16": "icons/chrome-icon16.png",
+    "48": "icons/chrome-icon48.png",
+    "128": "icons/chrome-icon128.png"
+  },
+  "background": {
+    "_scripts": [
+      "lib/angular/angular.min.js",
+      "app/bg/background.js"
+    ],
+    "page": "app/bg/background.html",
+    "persistent": false
+  },
+  "options_page": "app/options_custom/index.html",
+  "browser_action": {
+    "default_icon": "icons/chrome-icon16.png",
+    "default_title": "tbmp: Save bookmark",
+    "default_popup": "app/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "contextMenus",
+    "notifications",
+    "tabs",
+    "http://localhost:3000/*",
+    "http://*/*","https://*/*",
+    "activeTab"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self' "
+}

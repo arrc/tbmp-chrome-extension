@@ -1,0 +1,36 @@
+<div  ng-controller="MainCtrl as vm">
+  <pre>{{ vm.message }}</pre>
+
+  <form ng-submit="vm.urlDetails()">
+
+    <div angucomplete-alt
+    placeholder="Select or create new topic"
+    pause="100"
+    selected-object="vm.urlDetailsFormData.selectedTopic"
+    local-data="vm.topics"
+    search-fields="name"
+    title-field="name"
+    minlength="1"
+    auto-match="true"
+    focus-first="true"
+    match-class="highlight"
+    override-suggestions="true"
+    input-class="form-control form-control-small"> </div> <br>
+
+    <tags-input min-length="2" ng-model="vm.urlDetailsFormData.selectedTags">
+        <auto-complete
+          min-length="1"
+          source="vm.tags"
+          debounce-delay="100"
+          highlight-matched-text="true"
+          select-first-match="true"
+          load-on-focus="true"
+          load-on-down-arrow="true"
+          max-results-to-show="50"></auto-complete>
+    </tags-input> <br>
+
+    <input type="text" placeholder="notes" ng-model="vm.urlDetailsFormData.description">
+
+    <input type="submit" class="btn btn-default btn-block" value="Send" />
+  </form>
+</div>

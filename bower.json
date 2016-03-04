@@ -1,0 +1,34 @@
+{
+  "name": "chrome-extension",
+  "authors": [
+    "arrC <naveen@arrc.in>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "bootstrap": "^3.3.6",
+    "angular-ui-router": "^0.2.18",
+    "angular-PubSub": "angular.pubsub#*",
+    "ng-notify": "^0.7.2",
+    "ng-lodash": "^0.4.0",
+    "angular-bootstrap": "^1.2.1",
+    "angular-cache": "^4.5.0",
+    "angular-local-storage": "^0.2.5",
+    "angucomplete-alt": "^2.2.0",
+    "angular-aside": "^1.3.2",
+    "ng-tags-input": "^3.0.0",
+    "angular-jwt": "^0.0.9"
+  }
+}

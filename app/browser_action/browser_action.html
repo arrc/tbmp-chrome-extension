@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="tbmp" lang="en" ng-csp >
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chrome extention</title>
+	<link rel="stylesheet" href="../../lib/angular/angular-csp.css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="../../lib/angular-bootstrap/ui-bootstrap-csp.css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="../../lib/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="../../lib/angular-aside/dist/css/angular-aside.min.css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="../../lib/bootstrap/dist/css/bootstrap-theme.min.css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="../../lib/bootstrap/dist/css/bootstrap-theme.min.css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="../../lib/bootstrap/fonts/glyphicons-halflings-regular.svg" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="../../lib/angucomplete-alt/angucomplete-alt.css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="../../lib/ng-tags-input/ng-tags-input.bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="../../lib/ng-tags-input/ng-tags-input.css" media="screen" title="no title" charset="utf-8">
+	<style type="text/css">
+		body { padding-top: 70px; }
+		#mainPopup {
+			padding: 10px;
+			min-height: 500px;
+			width: 400px;
+			font-family: Helvetica, Ubuntu, Arial, sans-serif;
+		}
+		h1 {
+			font-size: 2em;
+		}
+		.angucomplete-dropdown {
+		    overflow-y: auto;
+		    max-height: 300px; // your preference
+		}
+	</style>
+</head>
+<body class="ng-cloak" id="mainPopup">
+	<header data-ng-include="'views/navbar.html'"></header>
+		<section data-ui-view></section>
+	<footer data-ng-include="'views/footer.html'"></footer>
+	<script src="../../lib/angular/angular.min.js" charset="utf-8"></script>
+	<script src="../../lib/angular-ui-router/release/angular-ui-router.min.js" charset="utf-8"></script>
+	<script src="../../lib/angular-bootstrap/ui-bootstrap.min.js" charset="utf-8"></script>
+	<script src="../../lib/angular-bootstrap/ui-bootstrap-tpls.min.js" charset="utf-8"></script>
+	<script src="../../lib/angular-aside/dist/js/angular-aside.min.js" charset="utf-8"></script>
+	<script src="../../lib/angular-local-storage/dist/angular-local-storage.min.js" charset="utf-8"></script>
+	<script src="../../lib/angular-cache/dist/angular-cache.min.js" charset="utf-8"></script>
+	<script src="../../lib/ng-lodash/build/ng-lodash.min.js" charset="utf-8"></script>
+	<script src="../../lib/angucomplete-alt/dist/angucomplete-alt.min.js" charset="utf-8"></script>
+	<script src="../../lib/ng-tags-input/ng-tags-input.min.js" charset="utf-8"></script>
+	<script src="app.js" charset="utf-8"></script>
+	<script src="js/main.ctrl.js" charset="utf-8"></script>
+	<script src="js/navbar.ctrl.js" charset="utf-8"></script>
+	<script src="js/login.ctrl.js" charset="utf-8"></script>
+</body>
+</html>
