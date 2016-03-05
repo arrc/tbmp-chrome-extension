@@ -29,6 +29,11 @@
 			.state('tags',{
 				url: '/tags',
 				templateUrl: 'views/tags.html'
+			})
+      .state('urls',{
+				url: '/urls',
+				templateUrl: 'views/urls.html'
 			});
+
   });
 }());

@@ -55,6 +55,16 @@ app.run(function($rootScope, $window, jwtHelper, $http, $q, CacheFactory, lodash
       return true;
     }
 
+		// RETRIVE URLS -------------------------------------------
+    if(request.messageName == "retriveUrls"){ console.log('retriveUrls request received.');
+			var urlService = new UrlService($http, $q, auth);
+			urlService.retriveUrls().then(function(response){ console.log("sending response to popup.");
+				sendResponse({ message: 'Success', data: response.data});
+			}, function(error){ console.log("sending response to popup.");
+				sendResponse({ message: 'Erro', data: error});
+			});
+    }
+
 		// LOGIN -------------------------------------------------
 		if(request.messageName == "login"){ console.log('Login request received.');
 			var loginCredentials = {
