@@ -19,11 +19,11 @@
 
     <tags-input min-length="2" ng-model="vm.urlDetailsFormData.selectedTags">
         <auto-complete
-          min-length="1"
+          min-length="3"
           source="vm.tags"
           debounce-delay="100"
-          highlight-matched-text="true"
           select-first-match="true"
+          highlight-matched-text="true"
           load-on-focus="true"
           load-on-down-arrow="true"
           max-results-to-show="50"></auto-complete>
