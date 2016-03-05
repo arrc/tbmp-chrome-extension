@@ -2,7 +2,7 @@
   'use strict';
   var app = angular.module('tbmp',[
     'LocalStorageModule', 'ngLodash', "ui.router",
-    'ui.bootstrap', 'ngAside', 'angucomplete-alt', 'ngTagsInput']);
+    'ui.bootstrap', 'ngAside', 'angucomplete-alt', 'ngTagsInput', 'angular-jwt']);
   /* ==========================================================
   	Config block
   ============================================================ */
