@@ -16,9 +16,9 @@
           url: tabs[0].url,
           title: tabs[0].title,
           favIconUrl: tabs[0].favIconUrl,
-          tags: _this.urlDetailsFormData.selectedTags,
-          topic: _this.urlDetailsFormData.selectedTopic,
-          description: _this.urlDetailsFormData.description
+          tags: (_this.urlDetailsFormData) ? _this.urlDetailsFormData.selectedTags : undefined ,
+          topic: (_this.urlDetailsFormData) ? _this.urlDetailsFormData.selectedTopic : undefined ,
+          description: (_this.urlDetailsFormData) ? _this.urlDetailsFormData.description : undefined
         };
         chrome.runtime.sendMessage({messageName: "prepareData", data: urlData}, function(response){
           _this.message = response.data.message;

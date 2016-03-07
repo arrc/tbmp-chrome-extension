@@ -12,7 +12,7 @@ var saveUrl = function(request, lodash, tagsCache, urlsCache, topicsCache, $http
 
   // PREPARE DATA -----------------------------------
     // TOPICS
-      var selectedTopic = request.data.topic.originalObject;
+      var selectedTopic = (request.data.topic && request.data.topic.originalObject) ? request.data.topic.originalObject : undefined ;
       if(lodash.isObject(selectedTopic)){
         payload.topic = {new: false, topicName: selectedTopic.name , topicId: selectedTopic._id};
       } else if (lodash.isString(selectedTopic)){
@@ -35,7 +35,7 @@ var saveUrl = function(request, lodash, tagsCache, urlsCache, topicsCache, $http
 
       console.log('Payload', payload);
   // SEND DATA ---------------------------------------
-  $http.post(BASEURL + '/url', payload).then(function(response){
+  $http.post(BASEURL + '/api/urls', payload).then(function(response){
     console.log('URL Saved: \n',response);
     // UPDATE URLS CACHE
     var oldNewUrlsContcat = urlsCache.get('urlsKey').concat(response.data.data.url);
@@ -68,9 +68,9 @@ var saveUrl = function(request, lodash, tagsCache, urlsCache, topicsCache, $http
     console.error(error);
     var options = {
       type: "basic",
-      iconUrl: "../../icons/icon128.png",
+      iconUrl: "../../icons/chrome-icon128.png",
       title: "ERROR !!! ERROR !!! ERROR !!!",
-      message: error.data.message,
+      message: (lodash.isObject(error.data)) ? error.data.message : error.statusText,
     };
     chrome.notifications.create(options);
   });
